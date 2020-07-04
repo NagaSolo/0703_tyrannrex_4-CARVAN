@@ -6,8 +6,10 @@ T = range(1, 100)
 N = range(1,10_000)
 
 t_input = int(input())
-while t_input in T:
-    n_input = int(input())
-    while n_input in N == True:
-        for i in range(n_input):
-            n_speed = int(input().split())
+if (t_input in T):
+    for test in range(t_input):
+        n_input = int(input())
+        if (n_input in N):
+            for speed in range(n_input):
+                n_speed = map(int, input().split())
+                print(n_speed)
