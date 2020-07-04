@@ -10,6 +10,5 @@ if (t_input in T):
     for test in range(t_input):
         n_input = int(input())
         if (n_input in N):
-            for speed in range(n_input):
-                n_speed = map(int, input().split())
-                print(n_speed)
+            n_speed = list(map(int, input().split()))
+            print(n_speed)
