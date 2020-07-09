@@ -28,7 +28,7 @@
 
 ### Example
 
-##### Input:
+##### Sample Input:
 3
 1
 10
@@ -37,7 +37,7 @@
 5
 4 5 1 2 3
 
-##### Output:
+##### Sample Output:
 1
 2
 2
