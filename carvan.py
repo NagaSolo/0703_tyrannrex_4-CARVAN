@@ -5,22 +5,30 @@
 # second N (speed of each cars specified in first line) separated by space
 # N = range(1,10_000)
 
-def get_test_validity(test):
-    T = range(1, 100)
-    if test == any(T):
-        return T
+def test_validitor(test):
+    # T = range(1, 100)
+    if test >= 1 & test <=100:
+        return test
     else:
         exit()
 
-def get_speed_validity(cars_number):
-    N = range(1, 10_000)
-    if cars_number == any(N):
-        return cars_number
+def cars_counter_validitor(numbers):
+    # N = range(1, 10_000)
+    if int(numbers) >= 1 & int(numbers) <= 10_000:
+        return numbers
+    else:
+        exit()
 
-# def get_n_speeds()
+def get_n_speeds(test, numbers):
+    test_validitor(test)
+    cars_counter_validitor(numbers)
+    [[map(int, input().split(numbers)) in range(numbers)] for t in range(test)]
 
-# test = int(input())
-# get_test_validity(test)
+test = int(input())
+numbers = input()
+get_n_speeds(test, numbers)
+# test_validitor(test)
+# cars_counter_validitor(numbers)
 
 # for testcases in range(test):
 #     n_speed_list = list(map(int, input().split()))
@@ -39,6 +47,6 @@ def get_speed_validity(cars_number):
                 #     else:
                 #         answer += answer
                     # print(n_input, answer)
-                print(n_speed)
-        else:
-            break
+        #         print(n_speed)
+        # else:
+        #     break
