@@ -19,12 +19,25 @@ def cars_counter_validitor(numbers):
     else:
         exit()
 
+def cars_w_maximum_speed(cars_speed_list):
+    car_counter = 1
+    for indeks in range(len(cars_speed_list) - 1):
+        if len(cars_speed_list) == 1:
+            print(len(cars_speed_list))
+        elif len(cars_speed_list) == 0:
+            car_counter -= 1
+            print(car_counter)
+        elif cars_speed_list[indeks + 1] <= cars_speed_list[indeks]:
+            car_counter += 1
+    print(car_counter)
+
+
 test = int(input())
 for t in range(test):
     numbers = int(input())
     cars_counter_validitor(numbers)
     cars_speed_list = [i for i in input().split()]
     if len(cars_speed_list) != numbers:
-        exit()
+        break
     else:
-        print(cars_speed_list)
+        cars_w_maximum_speed(cars_speed_list)
