@@ -19,10 +19,13 @@ def cars_counter_validitor(numbers):
     else:
         exit()
 
-def get_n_speeds(test, numbers):
-    test_validitor(test)
+def get_n_speeds(numbers):
     cars_counter_validitor(numbers)
-    [[map(int, input().split(numbers)) in range(numbers)] for t in range(test)]
+    cars_speed_list = [map(int, input().split(numbers))]
+    return cars_speed_list
 
 test = int(input())
-numbers = input()
+for t in range(test):
+    numbers = input()
+    get_n_speeds(numbers)
+
